@@ -1,0 +1,9 @@
+name: CI
+on: push
+
+jobs:
+    buids:
+        runs-on: ubunto-latest
+        steps:
+            - name: "Mostrar mensaje"
+              run: echo hola mundo
