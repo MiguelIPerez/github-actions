@@ -5,5 +5,18 @@ jobs:
     buids:
         runs-on: ubuntu-latest
         steps:
-            - name: "Mostrar mensaje"
-              run: echo hola mundo
+            - name: "Initial mensaje"
+              run: echo ******* Initial Job *******
+              
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Setup python
+              uses: actions/setup-pyhon@v5
+              with:
+                  python-version: '3.11'
+            - name: Run script
+              run: python ./hello-world.py
+              
+            - name: "Final mensaje"
+              run: echo ******* Initial Job *******
